@@ -1,0 +1,10 @@
+GDB Batch Mode:
+==============
+gdb -c <Core File>  <Path of binary> <<EOF
+set logging file /tmp/core_stack_output.log
+set logging overwrite on
+set logging on
+set pagination off
+bt 
+thread apply all bt
+EOF
